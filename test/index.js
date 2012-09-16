@@ -56,6 +56,10 @@ describe("express-feedback", function() {
       feedback(this.req, this.res, this.next);
     });
 
+    it("adds .message to .locals", function() {
+      this.res.locals.messages.should.be.a('array');
+    });
+
     describe("res.message", function() {
       it("adds a message of the given type", function() {
         this.res.message('info', 'in ur tests makin infos');

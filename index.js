@@ -3,14 +3,14 @@ function feedback(req, res, next){
     return next();
   }
 
-  function addMessage(type, message) {
-    var list = this.locals.messages = this.locals.messages || []
+  var list = res.locals.messages = res.locals.messages || []
 
+  function addMessage(type, message) {
     list.push({
       type: type, text: message
     });
   };
-  //['warning', 'error', 'info', 'success'].forEach(function(level){
+
   ['error', 'warning', 'info', 'success'].forEach(function(level){
     addMessage[level] = function(message){
       res.message(level, message);
