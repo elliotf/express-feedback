@@ -1,0 +1,24 @@
+{
+  "author": "Elliot Foster",
+  "name": "express-feedback",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elliotf/express-feedback.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.4.2",
+    "chai": "~1.2.0",
+    "nodemon": "~0.6.23",
+    "sinon": "~1.4.2"
+  },
+  "main": "./lib",
+  "scripts": {
+    "test": "make test"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
